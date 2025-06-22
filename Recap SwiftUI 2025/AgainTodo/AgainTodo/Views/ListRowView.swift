@@ -24,7 +24,7 @@ struct ListRowView: View {
 }
 
 #Preview(traits: .sizeThatFitsLayout) {
-    var item = ItemModel(title: "Title from preview", isCompleted: false)
+    let item = ItemModel(title: "Title from preview", isCompleted: false)
     ListRowView(item: item)
 
 //    .previewLayout(.sizeThatFits) // no replace ment till now!! traits: .sizeThatFitsLayout also didn't work
@@ -32,6 +32,6 @@ struct ListRowView: View {
 }
 
 #Preview() {
-    var item = ItemModel(title: "2nd from preview", isCompleted: true)
+    let item = ItemModel(title: "2nd from preview", isCompleted: true)
     ListRowView(item: item)
 }
