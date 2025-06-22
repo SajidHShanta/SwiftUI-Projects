@@ -31,7 +31,7 @@ struct AddView: View {
                         .font(.headline)
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .background(Color.blue)
+                        .background(Color.accentColor)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 })
             }
