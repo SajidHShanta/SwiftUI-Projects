@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		02FB8D2E2E0D122C005FC5EE /* DestinationListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB8D2D2E0D122C005FC5EE /* DestinationListingView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		0272D64F2E0BBAB5001F6BFF /* iTour-SwiftData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTour-SwiftData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02FB8D2D2E0D122C005FC5EE /* DestinationListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		0272D6462E0BBAB5001F6BFF = {
 			isa = PBXGroup;
 			children = (
+				02FB8D2D2E0D122C005FC5EE /* DestinationListingView.swift */,
 				0272D6512E0BBAB5001F6BFF /* iTour-SwiftData */,
 				0272D6502E0BBAB5001F6BFF /* Products */,
 			);
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FB8D2E2E0D122C005FC5EE /* DestinationListingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
