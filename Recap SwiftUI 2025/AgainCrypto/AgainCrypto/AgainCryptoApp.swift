@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct AgainCryptoApp: App {
+    
+    @StateObject private var vm = HomeVM()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
@@ -16,6 +19,7 @@ struct AgainCryptoApp: App {
                     .toolbar(.hidden)
 //                    .navigationBarHidden(true)
             }
+            .environmentObject(vm)
         }
     }
 }
