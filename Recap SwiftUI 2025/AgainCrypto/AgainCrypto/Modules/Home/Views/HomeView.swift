@@ -83,7 +83,6 @@ extension HomeView {
                     withAnimation(.spring) {
                         showPortfolio.toggle()
                     }
-                    
                 }
             
         }
