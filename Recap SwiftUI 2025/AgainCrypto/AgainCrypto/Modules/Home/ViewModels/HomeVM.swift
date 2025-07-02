@@ -27,10 +27,30 @@ class HomeVM: ObservableObject {
     }
     
     func addSubscribers() {
-        dataService.$allCoins
+//        dataService.$allCoins
+//            .sink { [weak self] coins in
+//                self?.allCoins = coins
+//            }
+//            .store(in: &cancellables)
+        
+        $searchText
+            .combineLatest(dataService.$allCoins) // it means it will get publish for both change of $searchText and $allCoins. thats why i commented 1st/avbove publisher
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .map(filterCoins)
             .sink { [weak self] coins in
                 self?.allCoins = coins
             }
             .store(in: &cancellables)
+    }
+    
+    func filterCoins(text: String, coins: [Coin]) -> [Coin] {
+        guard !text.isEmpty else {
+            return coins
+        }
+        
+        let lowercasedText = text.lowercased()
+        return coins.filter { coin in
+            return coin.name.lowercased().contains(lowercasedText) || coin.symbol.lowercased().contains(lowercasedText) || coin.id.lowercased().contains(lowercasedText)
+        }
     }
 }
