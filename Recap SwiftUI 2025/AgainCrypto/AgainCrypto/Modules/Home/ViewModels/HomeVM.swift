@@ -35,7 +35,7 @@ class HomeVM: ObservableObject {
         
         $searchText
             .combineLatest(dataService.$allCoins) // it means it will get publish for both change of $searchText and $allCoins. thats why i commented 1st/avbove publisher
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .debounce(for: .seconds(0.3), scheduler: DispatchQueue.main)
             .map(filterCoins)
             .sink { [weak self] coins in
                 self?.allCoins = coins
@@ -54,3 +54,4 @@ class HomeVM: ObservableObject {
         }
     }
 }
+
